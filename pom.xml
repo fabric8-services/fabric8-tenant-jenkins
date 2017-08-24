@@ -63,10 +63,10 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:fabric8io/tenant-jenkins.git</connection>
-    <developerConnection>scm:git:git@github.com:fabric8io/tenant-jenkins.git</developerConnection>
-    <url>http://github.com/fabric8io/tenant-jenkins</url>
-    <tag>fabric8io/tenant-jenkins-1.0.0</tag>
+    <connection>scm:git:git@github.com:fabric8-services/tenant-jenkins.git</connection>
+    <developerConnection>scm:git:git@github.com:fabric8-services/tenant-jenkins.git</developerConnection>
+    <url>http://github.com/fabric8-services/tenant-jenkins</url>
+    <tag>fabric8-services/tenant-jenkins-1.0.0</tag>
   </scm>
 
   <modules>

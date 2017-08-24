@@ -49,7 +49,7 @@ def updatefabric8Tenant(releaseVersion){
       sh "git checkout -b versionUpdate${uid}"
 
       sh "echo ${releaseVersion} > JENKINS_VERSION"
-      def message = "Update fabric8-online version to ${releaseVersion}"
+      def message = "Update fabric8-tenant-jenkins version to ${releaseVersion}"
       sh "git commit -a -m \"${message}\""
       sh "git push origin versionUpdate${uid}"
 
