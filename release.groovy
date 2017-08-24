@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 def stage(){
   return stageProject{
-    project = 'fabric8io/fabric8-tenant-jenkins'
+    project = 'fabric8-services/fabric8-tenant-jenkins'
     useGitTagForNextVersion = true
   }
 }
