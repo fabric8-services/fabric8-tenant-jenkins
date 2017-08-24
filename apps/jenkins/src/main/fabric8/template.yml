@@ -1,0 +1,6 @@
+kind: Template
+parameters:
+- name: PROJECT_NAMESPACE
+- name: RECOMMENDER_API_TOKEN
+- name: KEYCLOAK_URL
+  value: http://keycloak

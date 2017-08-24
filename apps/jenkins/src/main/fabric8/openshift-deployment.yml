@@ -1,0 +1,91 @@
+---
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
+metadata:
+  name: "jenkins"
+  annotations:
+    fabric8.io/target-platform: "openshift"
+    configmap.fabric8.io/update-on-change: "jenkins"
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+    recreateParams:
+      timeoutSeconds: 7200
+  template:
+    spec:
+      containers:
+      - image: "fabric8/jenkins-openshift:${jenkins-openshift.version}"
+        imagePullPolicy: "IfNotPresent"
+        name: "jenkins"
+        readinessProbe:
+          timeoutSeconds: 3
+          initialDelaySeconds: 3
+          httpGet:
+            path: "/login"
+            port: 8080
+        livenessProbe:
+          timeoutSeconds: 3
+          initialDelaySeconds: 420
+          failureThreshold: 30
+          httpGet:
+            path: "/login"
+            port: 8080
+        ports:
+        - containerPort: 50000
+          name: "slave"
+        - containerPort: 8080
+          name: "http"
+        lifecycle:
+          preStop:
+            exec:
+              # ensure Jenkins is idle before stopping or a 3 hour timeout is exceeded
+              command: ["sh","/var/lib/jenkins/pre-shutdown.sh"]
+        env:
+        - name: PROJECT_NAMESPACE
+          value: "${PROJECT_NAMESPACE}"
+        - name: "KUBERNETES_NAMESPACE"
+          valueFrom:
+            fieldRef:
+              fieldPath: "metadata.namespace"
+        - name: GIT_COMMITTER_EMAIL
+          value: fabric8@googlegroups.com
+        - name: GIT_COMMITTER_NAME
+          value: fabric8
+        - name: OPENSHIFT_ENABLE_OAUTH
+          value: "true"
+        - name: OPENSHIFT_ENABLE_REDIRECT_PROMPT
+          value: "true"
+        - name: KUBERNETES_TRUST_CERTIFICATES
+          value: "true"
+        - name: KUBERNETES_MASTER
+          value: "https://kubernetes.default:443"
+        - name: MAX_METASPACE_SIZE
+          value: 200m
+        - name: JENKINS_OPTS
+          value: "-Dgroovy.use.classvalue=true"
+        - name: RECOMMENDER_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: jenkins-recommender-api-token
+              key: token
+        resources:
+            limits:
+              memory: 1Gi
+              cpu: 2
+            requests:
+              cpu: "0"
+        volumeMounts:
+        - mountPath: /var/lib/jenkins
+          name: jenkins-home
+          readOnly: false
+        - name: jenkins-config
+          mountPath: /opt/openshift/configuration/
+      serviceAccountName: "jenkins"
+      volumes:
+      - name: jenkins-home
+        persistentVolumeClaim:
+          claimName: jenkins-home
+      - name: jenkins-config
+        configMap:
+          name: jenkins

@@ -1,0 +1,8 @@
+metadata:
+  labels:
+    expose: false
+spec:
+  type: ExternalName
+  externalName: ${RECOMMENDER_EXTERNAL_NAME}
+  ports:
+  - port: 80
