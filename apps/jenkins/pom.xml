@@ -23,7 +23,7 @@
   <parent>
     <groupId>io.fabric8.tenant.apps</groupId>
     <artifactId>tenant-jenkins-apps</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
   </parent>
 
   <artifactId>jenkins</artifactId>
