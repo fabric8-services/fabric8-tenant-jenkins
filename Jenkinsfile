@@ -38,7 +38,7 @@ releaseNode {
       }
 
       stage ('Update downstream dependencies'){
-        pipeline.updatefabric8Tenant(stagedProject)
+        pipeline.updatefabric8Tenant(stagedProject[1])
       }
     }
   } catch (err) {
