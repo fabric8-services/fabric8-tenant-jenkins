@@ -5,13 +5,6 @@ metadata:
     fabric8.io/target-platform: "kubernetes"
 data:
   keycloak.url: ${KEYCLOAK_URL}
-  credentials.xml.tpl: |-
-    <?xml version='1.0' encoding='UTF-8'?>
-    <com.cloudbees.plugins.credentials.SystemCredentialsProvider plugin="credentials@1.23">
-      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
-        ${KUBERNETES_CREDENTIALS}
-      </domainCredentialsMap>
-    </com.cloudbees.plugins.credentials.SystemCredentialsProvider>
   io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration.xml: |-
     <?xml version='1.0' encoding='UTF-8'?>
     <io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration plugin="openshift-sync@0.1-SNAPSHOT">
