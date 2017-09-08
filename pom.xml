@@ -75,6 +75,13 @@
   </modules>
 
   <properties>
+    <!--
+     lets add a larger timeout before DeploymentConfig fails a deployment
+     so that users on slower internet connections get a bit more time
+     to download their docker images!
+     -->
+    <fabric8.openshift.deployTimeoutSeconds>10000</fabric8.openshift.deployTimeoutSeconds>
+    
     <arquillian.version>1.1.8.Final</arquillian.version>
     <caddy-server.version>v9274a15</caddy-server.version>
     <fabric8.version>2.2.205</fabric8.version>
