@@ -34,6 +34,7 @@
 
   <modules>
     <module>fabric8-tenant-jenkins</module>
+    <module>fabric8-tenant-jenkins-full</module>
     <module>fabric8-tenant-jenkins-quotas-oso</module>
   </modules>
 
