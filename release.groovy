@@ -28,7 +28,7 @@ def release(project){
     promoteToDockerRegistry = 'docker.io'
     dockerOrganisation = 'fabric8'
     imagesToPromoteToDockerHub = []
-    extraImagesToTag = ['nexus']
+    extraImagesToTag = null
   }
 }
 
