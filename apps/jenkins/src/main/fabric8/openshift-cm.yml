@@ -110,6 +110,8 @@ data:
         <string>method io.fabric8.openshift.client.OpenShiftClient projects</string>
         <string>method io.fabric8.openshift.client.OpenShiftClient supportsOpenShiftAPIGroup</string>
         <string>method io.fabric8.openshift.client.OpenShiftClient supportsOpenShiftAPIGroup java.lang.String</string>
+        <string>staticMethod org.kohsuke.groovy.sandbox.impl.Checker checkedCall java.lang.Object boolean boolean java.lang.String java.lang.Object[]</string>
+        <string>new java.util.LinkedHashMap java.util.Map</string>
         <string>method java.io.File close</string>
         <string>method java.io.File exists</string>
         <string>method java.io.File newOutputStream</string>

@@ -8,10 +8,6 @@ metadata:
     fabric8.io/target-platform: "kubernetes"
 spec:
   replicas: 1
-  strategy:
-    type: Recreate
-    recreateParams:
-      timeoutSeconds: 7200
   template:
     spec:
       containers:
@@ -19,13 +15,13 @@ spec:
         imagePullPolicy: "IfNotPresent"
         name: "jenkins"
         readinessProbe:
-          timeoutSeconds: 3
-          initialDelaySeconds: 3
+          timeoutSeconds: 10
+          initialDelaySeconds: 10
           httpGet:
             path: "/login"
             port: 8080
         livenessProbe:
-          timeoutSeconds: 3
+          timeoutSeconds: 10
           initialDelaySeconds: 420
           failureThreshold: 30
           httpGet:

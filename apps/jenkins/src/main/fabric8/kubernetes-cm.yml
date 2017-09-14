@@ -108,6 +108,8 @@ data:
         <string>method io.fabric8.openshift.client.OpenShiftClient supportsOpenShiftAPIGroup</string>
         <string>method io.fabric8.openshift.client.OpenShiftClient supportsOpenShiftAPIGroup java.lang.String</string>
         <string>new org.csanchez.jenkins.plugins.kubernetes.PodAnnotation java.lang.String java.lang.String</string>
+        <string>staticMethod org.kohsuke.groovy.sandbox.impl.Checker checkedCall java.lang.Object boolean boolean java.lang.String java.lang.Object[]</string>
+        <string>new java.util.LinkedHashMap java.util.Map</string>
         <string>method java.lang.Class getPackage</string>
         <string>method java.lang.Package getSpecificationTitle</string>
         <string>method java.lang.Package getSpecificationVersion</string>
@@ -290,7 +292,7 @@ data:
               <serviceAccount>jenkins</serviceAccount>
               <remoteFs>/home/jenkins/workspace</remoteFs>
               <rootFs>/home/jenkins/</rootFs>
-              <instanceCap>20</instanceCap>
+              <instanceCap>5</instanceCap>
               <envVars>
                 <org.csanchez.jenkins.plugins.kubernetes.PodEnvVar>
                   <key>KUBERNETES_MASTER</key>
@@ -320,7 +322,7 @@ data:
           <skipTlsVerify>false</skipTlsVerify>
           <jenkinsUrl>http://jenkins:80</jenkinsUrl>
           <jenkinsTunnel>jenkins-jnlp:50000</jenkinsTunnel>
-          <containerCap>10</containerCap>
+          <containerCap>5</containerCap>
           <retentionTimeout>5</retentionTimeout>
         </org.csanchez.jenkins.plugins.kubernetes.KubernetesCloud>
       </clouds>
