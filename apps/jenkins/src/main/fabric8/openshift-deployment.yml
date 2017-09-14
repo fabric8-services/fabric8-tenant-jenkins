@@ -8,6 +8,10 @@ metadata:
     configmap.fabric8.io/update-on-change: "jenkins"
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
+    recreateParams:
+      timeoutSeconds: 7200
   template:
     spec:
       containers:
