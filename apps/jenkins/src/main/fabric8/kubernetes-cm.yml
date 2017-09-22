@@ -180,6 +180,7 @@ data:
         <string>new java.util.Properties</string>
         <string>new java.util.Scanner java.io.InputStream java.lang.String</string>
         <string>new java.util.Scanner java.lang.Readable</string>
+        <string>new java.util.LinkedHashMap java.util.Map</string>
         <string>staticField groovy.io.FileType FILES</string>
         <string>staticMethod org.codehaus.groovy.runtime.DefaultGroovyMethods getAt java.lang.Object java.lang.String</string>
         <string>staticMethod org.kohsuke.groovy.sandbox.impl.Checker checkedConstructor java.lang.Class java.lang.Object[]</string>
