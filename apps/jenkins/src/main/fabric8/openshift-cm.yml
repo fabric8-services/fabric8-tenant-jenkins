@@ -183,6 +183,7 @@ data:
         <string>new java.util.Properties</string>
         <string>new java.util.Scanner java.io.InputStream java.lang.String</string>
         <string>new java.util.Scanner java.lang.Readable</string>
+        <string>new java.util.LinkedHashMap java.util.Map</string>
         <string>method io.fabric8.kubernetes.client.KubernetesClient configMaps</string>
         <string>method io.fabric8.kubernetes.client.dsl.Namespaceable inNamespace java.lang.String</string>
         <string>staticField groovy.io.FileType FILES</string>
