@@ -39,6 +39,7 @@ clientsTemplate{
         }
 
         stage ('Update downstream dependencies'){
+          pipeline.updateDownstreamRepos(stagedProject[1])
           pipeline.updatefabric8Tenant(stagedProject[1])
         }
       }
