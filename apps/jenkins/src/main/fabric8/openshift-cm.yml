@@ -10,6 +10,11 @@ data:
         ${KUBERNETES_CREDENTIALS}
       </domainCredentialsMap>
     </com.cloudbees.plugins.credentials.SystemCredentialsProvider>
+  org.jenkinsci.plugins.updatebot.GlobalPluginConfiguration.xml: |-
+    <?xml version='1.0' encoding='UTF-8'?>
+    <org.jenkinsci.plugins.updatebot.GlobalPluginConfiguration plugin="updatebot@1.0.0-SNAPSHOT">
+      <credentialsId>cd-github</credentialsId>
+    </org.jenkinsci.plugins.updatebot.GlobalPluginConfiguration>
   io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration.xml: |-
     <?xml version='1.0' encoding='UTF-8'?>
     <io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration plugin="openshift-sync@0.1-SNAPSHOT">
