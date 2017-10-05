@@ -60,8 +60,12 @@ spec:
           value: "true"
         - name: KUBERNETES_MASTER
           value: "https://kubernetes.default:443"
-        - name: MAX_METASPACE_SIZE
-          value: 200m
+        - name: JAVA_OPTS
+          value: "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true"
+        - name: OPENSHIFT_JENKINS_JVM_ARCH
+          value: "i686"
+        - name: CONTAINER_INITIAL_PERCENT
+          value: "0.07"
         - name: JENKINS_OPTS
           value: "-Dgroovy.use.classvalue=true"
         - name: RECOMMENDER_API_TOKEN
@@ -71,7 +75,7 @@ spec:
               key: token
         resources:
             limits:
-              memory: 1Gi
+              memory: 512Mi
               cpu: 2
             requests:
               cpu: "0"
