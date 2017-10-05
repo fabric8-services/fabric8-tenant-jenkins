@@ -60,12 +60,16 @@ spec:
           value: "true"
         - name: KUBERNETES_MASTER
           value: "https://kubernetes.default:443"
+        - name: JAVA_GC_OPTS
+          value: "-XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90"
         - name: JAVA_OPTS
           value: "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true"
         - name: OPENSHIFT_JENKINS_JVM_ARCH
           value: "i686"
         - name: CONTAINER_INITIAL_PERCENT
           value: "0.07"
+        - name: CONTAINTER_INITIAL_PERCENT
+          value: "something-non-empty"
         - name: JENKINS_OPTS
           value: "-Dgroovy.use.classvalue=true"
         - name: RECOMMENDER_API_TOKEN
