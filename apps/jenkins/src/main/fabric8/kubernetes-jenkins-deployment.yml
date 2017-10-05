@@ -62,6 +62,8 @@ spec:
               key: client.secret
         - name: JENKINS_OPTS
           value: "-Dgroovy.use.classvalue=true"
+        - name: JAVA_HOME
+          value: "/etc/alternatives/java_sdk"
         - name: RECOMMENDER_API_TOKEN
           valueFrom:
             secretKeyRef:
