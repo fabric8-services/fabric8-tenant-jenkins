@@ -15,6 +15,43 @@ data:
     <org.jenkinsci.plugins.updatebot.GlobalPluginConfiguration plugin="updatebot@1.0.0-SNAPSHOT">
       <credentialsId>cd-github</credentialsId>
     </org.jenkinsci.plugins.updatebot.GlobalPluginConfiguration>
+  hudson.tasks.Maven.xml: |-
+    <?xml version='1.0' encoding='UTF-8'?>
+    <hudson.tasks.Maven_-DescriptorImpl>
+      <installations>
+        <hudson.tasks.Maven_-MavenInstallation>
+          <name>maven</name>
+          <properties>
+            <hudson.tools.InstallSourceProperty>
+              <installers>
+                <hudson.tasks.Maven_-MavenInstaller>
+                  <id>3.5.0</id>
+                </hudson.tasks.Maven_-MavenInstaller>
+              </installers>
+            </hudson.tools.InstallSourceProperty>
+          </properties>
+        </hudson.tasks.Maven_-MavenInstallation>
+      </installations>
+    </hudson.tasks.Maven_-DescriptorImpl
+  jenkins.plugins.nodejs.tools.NodeJSInstallation.xml: |-
+    <?xml version='1.0' encoding='UTF-8'?>
+    <jenkins.plugins.nodejs.tools.NodeJSInstallation_-DescriptorImpl plugin="nodejs@1.2.4">
+      <installations class="jenkins.plugins.nodejs.tools.NodeJSInstallation-array">
+        <jenkins.plugins.nodejs.tools.NodeJSInstallation>
+          <name>nodejs</name>
+          <properties>
+            <hudson.tools.InstallSourceProperty>
+              <installers>
+                <jenkins.plugins.nodejs.tools.NodeJSInstaller>
+                  <id>8.6.0</id>
+                  <npmPackagesRefreshHours>72</npmPackagesRefreshHours>
+                </jenkins.plugins.nodejs.tools.NodeJSInstaller>
+              </installers>
+            </hudson.tools.InstallSourceProperty>
+          </properties>
+        </jenkins.plugins.nodejs.tools.NodeJSInstallation>
+      </installations>
+    </jenkins.plugins.nodejs.tools.NodeJSInstallation_-DescriptorImpl>
   io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration.xml: |-
     <?xml version='1.0' encoding='UTF-8'?>
     <io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration plugin="openshift-sync@0.1-SNAPSHOT">
