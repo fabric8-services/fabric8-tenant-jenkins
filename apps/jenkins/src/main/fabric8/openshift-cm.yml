@@ -184,6 +184,8 @@ data:
         <string>method java.util.Properties load java.io.InputStream</string>
         <string>method java.util.regex.Matcher group java.lang.String</string>
         <string>method java.util.regex.Matcher matches</string>
+        <string>method io.fabric8.kubernetes.api.model.HasMetadata getMetadata</string>
+        <string>method java.util.Collection toArray</string>
         <string>method java.util.regex.Pattern matcher java.lang.CharSequence</string>
         <string>method java.util.Scanner useDelimiter java.lang.String</string>
         <string>method jenkins.model.Jenkins getCloud java.lang.String</string>
