@@ -205,6 +205,8 @@ data:
         <string>method org.w3c.dom.NodeList getLength</string>
         <string>method org.w3c.dom.NodeList item int</string>
         <string>method io.fabric8.kubernetes.api.model.ConfigMap getData</string>
+        <string>method io.fabric8.kubernetes.api.model.HasMetadata getMetadata</string>
+        <string>method java.util.Collection toArray</string>
         <string>new groovy.json.JsonBuilder java.lang.Object</string>
         <string>new groovy.json.JsonSlurper</string>
         <string>new groovy.json.JsonSlurperClassic</string>
