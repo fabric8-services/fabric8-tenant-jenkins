@@ -39,6 +39,7 @@ def updateDownstreamRepos(releaseVersion){
             'fabric8-jenkins/fabric8-jenkins-platform'
     ]
     version = releaseVersion
+    autoMerge = true
   }
 }
 
