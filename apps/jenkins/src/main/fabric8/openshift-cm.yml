@@ -14,6 +14,8 @@ data:
     <?xml version='1.0' encoding='UTF-8'?>
     <org.jenkinsci.plugins.updatebot.GlobalPluginConfiguration plugin="updatebot@1.0.0-SNAPSHOT">
       <credentialsId>cd-github</credentialsId>
+      <useAnsiColor>true</useAnsiColor>
+      <jenkinsfileLibraryGitCloneURL></jenkinsfileLibraryGitCloneURL>
     </org.jenkinsci.plugins.updatebot.GlobalPluginConfiguration>
   hudson.tasks.Maven.xml: |-
     <?xml version='1.0' encoding='UTF-8'?>
