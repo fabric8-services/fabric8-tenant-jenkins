@@ -4,3 +4,4 @@ parameters:
 - name: RECOMMENDER_API_TOKEN
 - name: KEYCLOAK_URL
   value: http://keycloak
+- name: FABRIC8_CONSOLE_URL

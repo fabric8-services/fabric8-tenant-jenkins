@@ -10,3 +10,9 @@ metadata:
     version: ${project.version}
 data:
   space: ${PROJECT_NAMESPACE}
+
+  # where is the fabric8 console
+  fabric8-console-url: ${FABRIC8_CONSOLE_URL}
+
+  # where is the fabric8 console
+  keycloak-url: ${KEYCLOAK_URL}
