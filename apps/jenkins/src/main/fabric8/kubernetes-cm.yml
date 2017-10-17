@@ -29,7 +29,7 @@ data:
           </properties>
         </hudson.tasks.Maven_-MavenInstallation>
       </installations>
-    </hudson.tasks.Maven_-DescriptorImpl
+    </hudson.tasks.Maven_-DescriptorImpl>
   jenkins.plugins.nodejs.tools.NodeJSInstallation.xml: |-
     <?xml version='1.0' encoding='UTF-8'?>
     <jenkins.plugins.nodejs.tools.NodeJSInstallation_-DescriptorImpl plugin="nodejs@1.2.4">
