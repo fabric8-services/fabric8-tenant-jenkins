@@ -26,7 +26,7 @@
 
   <groupId>io.fabric8.tenant</groupId>
   <artifactId>tenant-jenkins</artifactId>
-  <version>4.0.0-SNAPSHOT</version>
+  <version>4.0.38</version>
   <packaging>pom</packaging>
 
   <name>Fabric8 Tenant :: Jenkins</name>
