@@ -32,11 +32,6 @@ spec:
           name: "slave"
         - containerPort: 8080
           name: "http"
-        lifecycle:
-          preStop:
-            exec:
-              # ensure Jenkins is idle before stopping or a 3 hour timeout is exceeded
-              command: ["sh","/var/lib/jenkins/pre-shutdown.sh"]
         env:
         - name: PROJECT_NAMESPACE
           value: "${PROJECT_NAMESPACE}"
