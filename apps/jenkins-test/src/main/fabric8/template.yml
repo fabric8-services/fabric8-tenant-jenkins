@@ -1,0 +1,4 @@
+kind: Template
+parameters:
+- name: RECOMMENDER_API_TOKEN
+- name: TEST_ADMIN_PASSWORD
