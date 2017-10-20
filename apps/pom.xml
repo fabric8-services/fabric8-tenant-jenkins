@@ -36,6 +36,7 @@
     <module>bayesian-link</module>
     <module>content-repository</module>
     <module>jenkins</module>
+    <module>jenkins-test</module>
   </modules>
 
 </project>
