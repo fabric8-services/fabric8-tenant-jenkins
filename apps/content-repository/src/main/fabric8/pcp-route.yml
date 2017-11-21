@@ -1,0 +1,9 @@
+metadata:
+  name: "pcp"
+spec:
+  to:
+    kind: Service
+    name: "pcp"
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

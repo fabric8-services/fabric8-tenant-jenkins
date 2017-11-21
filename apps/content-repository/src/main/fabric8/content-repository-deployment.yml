@@ -42,6 +42,22 @@ spec:
         - mountPath: "/var/www/html"
           name: "content"
           readOnly: false
+      - env:
+        - name: "OSIO_NAMESPACE"
+          valueFrom:
+            fieldRef:
+              fieldPath: "metadata.namespace"
+        - name: "OSIO_ACL_SERVER"
+          valueFrom:
+            configMapKeyRef:
+              key: "osio-acl-server"
+              name: "content-repository"
+        image: "registry.devshift.net/perf/oso-webapi-guard"
+        name: oso-webapi-guard
+        imagePullPolicy: "IfNotPresent"
+        ports:
+          - containerPort: 8001
+            name: "pcp-webguard"
       volumes:
       - name: content
         persistentVolumeClaim:
