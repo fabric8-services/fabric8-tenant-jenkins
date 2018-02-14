@@ -76,6 +76,8 @@ spec:
             secretKeyRef:
               name: jenkins-recommender-api-token
               key: token
+        - name: JENKINS_ROOT_URL
+          value: "${JENKINS_ROOT_URL}"
         resources:
             limits:
               memory: 512Mi
