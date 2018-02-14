@@ -8,3 +8,4 @@ parameters:
 - name: RECOMMENDER_API_TOKEN
 - name: KEYCLOAK_URL
 - name: FABRIC8_CONSOLE_URL
+- name: JENKINS_ROOT_URL
