@@ -98,6 +98,7 @@ data:
         <string>method io.fabric8.kubernetes.api.model.Doneable done</string>
         <string>method io.fabric8.kubernetes.api.model.KubernetesResourceList getItems</string>
         <string>method io.fabric8.kubernetes.api.model.ObjectMeta getName</string>
+        <string>method io.fabric8.kubernetes.api.model.ObjectMeta getLabels</string>
         <string>method io.fabric8.kubernetes.api.model.ObjectMetaFluent addToAnnotations java.lang.String java.lang.String</string>
         <string>method io.fabric8.kubernetes.api.model.ObjectMetaFluent withName java.lang.String</string>
         <string>method io.fabric8.kubernetes.api.pipelines.PipelineConfiguration getUseDockerSocketFlag</string>
