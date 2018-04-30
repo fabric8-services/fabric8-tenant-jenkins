@@ -32,17 +32,6 @@ def release(project){
   }
 }
 
-def updateDownstreamRepos(releaseVersion){
-  pushPomPropertyChangePR {
-    propertyName = 'jenkins-tenant.version'
-    projects = [
-            'fabric8-jenkins/fabric8-jenkins-platform'
-    ]
-    version = releaseVersion
-    autoMerge = true
-  }
-}
-
 def updatefabric8Tenant(releaseVersion){
   ws{
     container(name: 'clients') {
