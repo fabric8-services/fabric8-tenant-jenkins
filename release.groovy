@@ -46,15 +46,11 @@ def updateDownstreamRepos(releaseVersion){
 def updatefabric8Tenant(releaseVersion){
   ws{
     container(name: 'clients') {
+
       def flow = new io.fabric8.Fabric8Commands()
-      sh 'chmod 600 /root/.ssh-git/ssh-key'
-      sh 'chmod 600 /root/.ssh-git/ssh-key.pub'
-      sh 'chmod 700 /root/.ssh-git'
+      flow.setupGitSSH()
 
       git 'git@github.com:fabric8-services/fabric8-tenant.git'
-
-      sh "git config user.email fabric8cd@gmail.com"
-      sh "git config user.name fabric8-cd"
 
       def uid = UUID.randomUUID().toString()
       sh "git checkout -b versionUpdate${uid}"
