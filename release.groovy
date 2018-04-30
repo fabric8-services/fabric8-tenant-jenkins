@@ -50,15 +50,18 @@ def updatefabric8Tenant(releaseVersion){
       def flow = new io.fabric8.Fabric8Commands()
       flow.setupGitSSH()
 
-      git 'git@github.com:fabric8-services/fabric8-tenant.git'
-
       def uid = UUID.randomUUID().toString()
-      sh "git checkout -b versionUpdate${uid}"
-
-      sh "echo ${releaseVersion} > JENKINS_VERSION"
+      def branch = "versionUpdate${uid}"
       def message = "Update fabric8-tenant-jenkins version to ${releaseVersion}"
-      sh "git commit -a -m \"${message}\""
-      sh "git push origin versionUpdate${uid}"
+
+      sh """
+         git clone git@github.com:fabric8-services/fabric8-tenant.git --depth 1
+         cd fabric8-tenant
+         echo ${releaseVersion} > JENKINS_VERSION
+         git checkout -b ${branch}
+         git commit -a -m "${message}"
+         git push origin ${branch}
+         """
 
       def prId = flow.createPullRequest(message,'fabric8-services/fabric8-tenant',"versionUpdate${uid}")
       flow.mergePR('fabric8-services/fabric8-tenant',prId)
