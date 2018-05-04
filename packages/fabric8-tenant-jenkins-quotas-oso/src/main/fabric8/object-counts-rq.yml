@@ -4,7 +4,7 @@ metadata:
   name: object-counts
 spec:
   hard:
-    persistentvolumeclaims: "3"
+    persistentvolumeclaims: "2"
     replicationcontrollers: "20"
     secrets: "40"
     services: "5"
