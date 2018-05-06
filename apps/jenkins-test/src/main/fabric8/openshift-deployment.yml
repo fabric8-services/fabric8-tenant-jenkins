@@ -14,6 +14,10 @@ spec:
       timeoutSeconds: 7200
   template:
     spec:
+      initContainers:
+      - name: "content-repository-init"
+        image: "centos:7"
+        command: ['sh', '-c', 'for i in {1..100}; do sleep 1; if curl -L -m 4 content-repository; then exit 0; else echo waiting for content-repository ...; fi; done; exit 1']
       containers:
       - image: "fabric8/jenkins-openshift:${jenkins-openshift.version}"
         imagePullPolicy: "IfNotPresent"
