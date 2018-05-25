@@ -4,7 +4,7 @@ metadata:
   name: compute-resources
 spec:
   hard:
-    limits.cpu: "4"
-    limits.memory: 2Gi
+    limits.cpu: "2"
+    limits.memory: 1Gi
   scopes:
   - NotTerminating
