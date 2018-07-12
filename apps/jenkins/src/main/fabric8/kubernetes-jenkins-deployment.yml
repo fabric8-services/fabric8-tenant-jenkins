@@ -70,6 +70,8 @@ spec:
             secretKeyRef:
               name: jenkins-recommender-api-token
               key: token
+        - name: K8S_PIPELINE_SERVICE_PATCH
+          value: enabled
         resources:
             limits:
               memory: 1Gi
