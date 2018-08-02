@@ -61,10 +61,10 @@ spec:
           value: "-XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true"
         - name: OPENSHIFT_JENKINS_JVM_ARCH
           value: "i686"
+        - name: CONTAINER_CORE_LIMIT
+          value: "1"
         - name: CONTAINER_INITIAL_PERCENT
-          value: "0.07"
-        - name: CONTAINTER_INITIAL_PERCENT
-          value: "something-non-empty"
+          value: "0.50"
         - name: JENKINS_OPTS
           value: "-Dgroovy.use.classvalue=true"
         - name: JAVA_HOME
