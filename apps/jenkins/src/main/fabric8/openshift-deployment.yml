@@ -82,7 +82,7 @@ spec:
           value: enabled
         resources:
             limits:
-              memory: 512Mi
+              memory: 1Gi
               cpu: 1
             requests:
               cpu: "0"
