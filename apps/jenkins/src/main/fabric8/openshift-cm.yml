@@ -60,6 +60,7 @@ data:
       <enabled>true</enabled>
       <jobNamePattern>.*</jobNamePattern>
       <namespace>${PROJECT_NAMESPACE}</namespace>
+      <cancelPRBuildOnUpdate>true</cancelPRBuildOnUpdate>
     </io.fabric8.jenkins.openshiftsync.GlobalPluginConfiguration>
   org.jenkinsci.main.modules.sshd.SSHD.xml: |-
     <?xml version='1.0' encoding='UTF-8'?>
