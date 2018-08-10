@@ -34,11 +34,6 @@
   <dependencies>
     <dependency>
       <groupId>io.fabric8.tenant.apps</groupId>
-      <artifactId>content-repository</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>io.fabric8.tenant.apps</groupId>
       <artifactId>jenkins</artifactId>
       <version>${project.version}</version>
     </dependency>
