@@ -62,9 +62,9 @@ spec:
         - name: OPENSHIFT_JENKINS_JVM_ARCH
           value: "i686"
         - name: CONTAINER_CORE_LIMIT
-          value: "1"
+          value: "2"
         - name: CONTAINER_INITIAL_PERCENT
-          value: "0.50"
+          value: "0.60"
         - name: JENKINS_OPTS
           value: "-Dgroovy.use.classvalue=true"
         - name: JAVA_HOME
@@ -82,8 +82,8 @@ spec:
           value: enabled
         resources:
             limits:
-              memory: 512Mi
-              cpu: 1
+              memory: 1Gi
+              cpu: 2
             requests:
               cpu: "0"
         volumeMounts:
