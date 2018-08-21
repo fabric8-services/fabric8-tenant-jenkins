@@ -19,8 +19,9 @@ spec:
         imagePullPolicy: "IfNotPresent"
         name: "jenkins"
         readinessProbe:
-          timeoutSeconds: 10
-          initialDelaySeconds: 10
+          timeoutSeconds: 240
+          initialDelaySeconds: 40
+          periodSeconds: 15
           httpGet:
             path: "/login"
             port: 8080
