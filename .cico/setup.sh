@@ -25,7 +25,7 @@ function setup() {
     # We need to disable selinux for now, XXX
     /usr/sbin/setenforce 0 || :
 
-    yum -y install docker make golang git
+    yum -y install docker git
 
     curl -L http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -o/etc/yum.repos.d/epel-apache-maven.repo
     rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
