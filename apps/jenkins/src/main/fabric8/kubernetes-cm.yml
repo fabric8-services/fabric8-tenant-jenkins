@@ -71,6 +71,7 @@ data:
         <string>field hudson.plugins.git.GitSCM GIT_BRANCH</string>
         <string>field hudson.plugins.git.GitSCMBackwardCompatibility branch</string>
         <string>field hudson.plugins.git.GitSCMBackwardCompatibility source</string>
+        <string>field java.util.ArrayList size</string>
         <string>method groovy.json.JsonBuilder toPrettyString</string>
         <string>method groovy.json.JsonSlurper parse java.io.Reader</string>
         <string>method groovy.json.JsonSlurperClassic parse java.io.Reader</string>
